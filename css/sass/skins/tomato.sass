@@ -1,0 +1,27 @@
+@import "../bourbon/bourbon"
+
+$main_c: #8238A7
+$blue: #DC4C46
+$gray_bg: #E6E7E9
+
+$darken_m: darken($main_c, 15%)
+$lighten_m: lighten($main_c, 10%)
+
+$exo: 'Exo 2', sans-serif
+$montserrat: 'Montserrat', sans-serif
+$roboto: 'Roboto', sans-serif
+
+@mixin kerning($kerning)
+	letter-spacing: $kerning + px
+
+@mixin mt($time)
+	transition: all $time ease
+
+@mixin delay($time)
+	+animation-delay($time)
+
+@mixin duration($time)
+	+animation-duration($time)
+
+@mixin aic($aic)
+	+animation-iteration-count($aic)
