@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My AngularJS App</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/bootstrap4/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="app.css">
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body ng-controller="myCtrl">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-7 col-md-8 col-sm-8 col-lg-8">
+                <div class="card text-white bg-primary mb-3">
+                    <div class="card-header">
+                        <h3 class="panel-title" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                            Drinks and food
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="collapse" id="collapseExample">
+                            <ul data-drop="true" ng-model='list1' data-jqyoui-options="optionsList1" jqyoui-droppable="{multiple:true}">
+                                <li
+                                        class="btn btn-light btn-draggable"
+                                        ng-repeat="item in list1"
+                                        data-drag="true"
+                                        data-jqyoui-options="{revert: 'invalid'}"
+                                        ng-model="list1"
+                                        jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true}"
+                                        ng-hide="!item.title">{{item.title}}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card text-white bg-primary mb-3">
+                    <div class="card-header">
+                        <h3
+                                class="panel-title"
+                                type="button"
+                                data-toggle="collapse"
+                                data-target="#collapseExample1"
+                                aria-expanded="false" a
+                                ria-controls="collapseExample">
+                            Clothes and shoes
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="collapse" id="collapseExample1">
+                            <ul data-drop="true" ng-model='list2' data-jqyoui-options="optionsList1" jqyoui-droppable="{multiple:true}">
+                                <li
+                                        class="btn btn-light btn-draggable"
+                                        ng-repeat="item in list2"
+                                        data-drag="true"
+                                        data-jqyoui-options="{revert: 'invalid'}"
+                                        ng-model="list2"
+                                        jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true}"
+                                        ng-hide="!item.title">{{item.title}}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card text-white bg-primary mb-3">
+                    <div class="card-header">
+                        <h3
+                                class="panel-title"
+                                type="button"
+                                data-toggle="collapse"
+                                data-target="#collapseExample2"
+                                aria-expanded="false"
+                                aria-controls="collapseExample">
+                            Beer and whiskey
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="collapse" id="collapseExample2">
+                            <ul data-drop="true" ng-model='list3' data-jqyoui-options="optionsList1" jqyoui-droppable="{multiple:true}">
+                                <li
+                                        class="btn btn-light btn-draggable"
+                                        ng-repeat="item in list3"
+                                        data-drag="true"
+                                        data-jqyoui-options="{revert: 'invalid'}"
+                                        ng-model="list3"
+                                        jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true}"
+                                        ng-hide="!item.title">{{item.title}}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="basket card bg-light mb-3">
+        <div class="card-header">
+            <h3
+                    class="panel-title"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#basket"
+                    aria-expanded="false"
+                    aria-controls="collapseExample">
+                Basket
+            </h3>
+        </div>
+        <div class="card-body">
+            <div class="collapse" id="basket">
+                <ul class="thumbnail" data-drop="true" ng-model='list4' data-jqyoui-options="optionsList1" jqyoui-droppable="{multiple:true}">
+                    <li class="btn btn-primary btn-draggable" ng-repeat="item in list4" ng-show="item.title" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="list4" jqyoui-draggable="{index: {{$index}},animate:true}">{{item.title}}</li>
+                </ul>
+                <button type="submit" class="basket__btn btn btn-success pull-right" ng-click="onCheck()">
+                    Check
+                </button>
+                <button type="submit" data-ng-disabled="dsblBtn" ng-class="clBtn" class="basket__btn btn pull-right" ng-click="onSubmit()">
+                    Submit
+                </button>
+            </div>
+        </div>
+    </div>
+
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/jquery-ui/jquery-ui.js"></script>
+  <script src="bower_components/angular-dragdrop/src/angular-dragdrop.js"></script>
+  <script src="bower_components/bootstrap4/dist/js/bootstrap.js"></script>
+  <script src="app.js"></script>
+  <script src="view1/view1.js"></script>
+  <script src="view2/view2.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+</body>
+</html>
