@@ -1,0 +1,19 @@
+<div class="todo comments">
+    <header class="comment-header">
+        <h1 class="header__heading">Comments # {{vm.currentId}}</h1>
+    </header>
+    <section class="todo-list" ng-if="vm.comments.length > 0">
+        <ul class="comments-list">
+            <li class="comments-list__item"
+                ng-repeat="comment in vm.result track by $index">
+                <div class="comment__img"></div>
+                <p class="list__p">{{comment.comment}}</p>
+            </li>
+        </ul>
+    </section>
+    <section class="comment-footer">
+        <div class="comment-footer__img"></div>
+        <textarea class="comment__textarea" name="text" cols="33" rows="2"
+                  ng-model="vm.todoComment" ng-keydown="$event.ctrlKey && $event.keyCode === 13 && vm.addComment()"></textarea>
+    </section>
+</div>
