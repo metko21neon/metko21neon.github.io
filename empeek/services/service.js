@@ -5,7 +5,6 @@ angular.module('myApp')
         var _currentId = null;
         var _currentTitle = '';
         var data = {};
-        var _numberOfComments = 0;
         return {
             setCurrentData: function (id, title) {
                 _currentId = id + 1;

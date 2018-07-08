@@ -2,11 +2,12 @@
     'use strict';
     angular.module('myApp.comments', ['ngRoute']).
     config(['$routeProvider', function($routeProvider) {
-        $routeProvider.when('/todo/:todoId', {
-            templateUrl: 'comments/comments.component.html',
-            controllerAs: 'vm',
-            controller: commentsController
-        });
+        $routeProvider
+            .when('/todo/:todoId', {
+                templateUrl: 'comments/comments.component.html',
+                controllerAs: 'vm',
+                controller: commentsController
+            });
     }]);
 
     angular.module('myApp')
@@ -24,6 +25,13 @@
         vm.currentTitle = vm.data.title;
         vm.comments = (localStorage.getItem('comments')!==null) ? JSON.parse(localStorage.getItem('comments')) : [];
         localStorage.setItem('comments', JSON.stringify(vm.comments));
+
+        function getCurrentComments() {
+            vm.result = vm.comments.filter(function (item) {
+                return item.title === vm.currentTitle;
+            });
+        };
+
         vm.addComment = function() {
             vm.comments.push({
                 id: vm.currentId,
@@ -32,12 +40,8 @@
             });
             vm.todoComment = '';
             localStorage.setItem('comments', JSON.stringify(vm.comments));
-            vm.result = vm.comments.filter(function (item) {
-                return item.title === vm.currentTitle;
-            });
+            getCurrentComments();
         };
-        vm.result = vm.comments.filter(function (item) {
-            return item.title === vm.currentTitle;
-        });
+        getCurrentComments();
     }
 })();
