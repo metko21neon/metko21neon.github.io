@@ -1,0 +1,200 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+.header
+	background: #3b1b67 fixed top center
+	min-height: 100vh
+
+.underline
+	width: 100%
+	height: 1px
+	background: linear-gradient(to right, #3b1b67 0%, $accent 10%, $accent 90%, #3b1b67 100%)
+
+.logo
+	margin-bottom: 5px
+
+ul, li
+	display: block
+	padding: 0
+	margin: 0
+
+.menu
+	margin-top: 22px
+
+.menu__item
+	margin: 0 24px
+
+.menu__link
+	color: $text
+	font-size: 1.125em
+	font-weight: 400
+	-moz-transform: scale(1, 0.9)
+	-webkit-transform: scale(1, 0.9)
+	-ms-transform: scale(1, 0.9)
+
+.menu__link
+	display: block
+	height: 32px
+
+.menu__link
+	&:hover, &:focus, &:active
+		text-decoration: none
+		color: $text
+		text-shadow: 0 0 1em $accent
+		cursor: pointer
+		.box
+			background: linear-gradient(to right, #3b1b67 0%, $accent 50%, #3b1b67 100%)
+
+.box
+	width: 100%
+	height: 1px
+
+.icons
+	margin-top: 14px
+
+.icons__item
+	margin-right: -27px
+
+.header__heading
+	font-size: 3em
+	font-weight: 600
+	margin: 0
+	line-height: 68px
+	-moz-transform: scale(1, 0.9)
+	-webkit-transform: scale(1, 0.9)
+	-ms-transform: scale(1, 0.9)
+
+.heading
+	padding-left: 30px
+	max-width: 410px
+	margin-top: 95px
+	background: linear-gradient(to right, #3b4287 0%, #3b1b67 100%)
+
+.header__heading_bg-right
+	margin: 0 0 0 22px
+	padding-left: 10px
+
+.header__heading_bg-left
+	max-width: 410px
+	background: linear-gradient(to left, #3b4287 0%, #3b1b67 100%)
+
+.header__paragraph
+	text-align: center
+	font-weight: 200
+	font-size: 1em
+	padding: 0 20px 5px
+	line-height: 18px
+	margin: 0
+	-moz-transform: scale(1, 0.9)
+	-webkit-transform: scale(1, 0.9)
+	-ms-transform: scale(1, 0.9)
+
+.header__heading_h2
+	font-weight: 600
+	color: $accent
+	font-size: 1.875em
+	line-height: 68px
+	text-transform: uppercase
+	margin: 0
+	-moz-transform: scale(1, 0.9)
+	-webkit-transform: scale(1, 0.9)
+	-ms-transform: scale(1, 0.9)
+
+.header__timer
+	height: 150px
+
+.header__btn
+	display: block
+	margin: 0 auto
+	width: 240px
+	height: 40px
+	text-transform: uppercase
+	color: $text
+	font-weight: 600
+	font-size: 1.625em
+	background: linear-gradient(to right, #3b1b67 0%, $accent 50%, #3b1b67 100%)
+	border: none
+	border-top: solid $accent 1px
+	border-bottom: solid $accent 1px
+	position: relative
+
+.header__btn
+	&:after, &:before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+
+.header__btn:after
+	border-top: solid #3b1b67 1px
+	border-bottom: solid #3b1b67 1px
+
+.header__btn:before
+	border-top: solid $accent 2px
+	border-bottom: solid $accent 2px
+
+.header__img
+	margin-top: 50px
+
+.header__scroll
+	background-color: #3b2387
+	width: 100%
+	height: 27px
+
+.button
+	margin-left: 60px
+
+//Scroll Down
+.scroll-down__span
+	position: absolute
+	bottom: 10px
+	left: 50%
+	width: 20px
+	height: 20px
+	margin-left: -12px
+	border-left: 1px solid $accent
+	border-bottom: 1px solid $accent
+	-webkit-transform: rotate(-45deg)
+	transform: rotate(-45deg)
+	box-sizing: border-box
+	
+@import "media" // Always at the end
