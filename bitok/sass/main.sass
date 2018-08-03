@@ -38,6 +38,11 @@ body
 b, strong
 	font-weight: bold
 
+.text-scale
+	-moz-transform: scale(1, 0.9)
+	-webkit-transform: scale(1, 0.9)
+	-ms-transform: scale(1, 0.9)
+
 .header
 	background: #3b1b67 fixed top center
 	min-height: 100vh
@@ -117,7 +122,7 @@ ul, li
 
 .header__paragraph
 	text-align: center
-	font-weight: 200
+	font-weight: 300
 	font-size: 1em
 	padding: 0 20px 5px
 	line-height: 18px
@@ -133,9 +138,6 @@ ul, li
 	line-height: 68px
 	text-transform: uppercase
 	margin: 0
-	-moz-transform: scale(1, 0.9)
-	-webkit-transform: scale(1, 0.9)
-	-ms-transform: scale(1, 0.9)
 
 .header__timer
 	height: 150px
@@ -183,10 +185,24 @@ ul, li
 .button
 	margin-left: 60px
 
-//Scroll Down
-.scroll-down__span
+.button
+	&:active, &:hover, &:focus
+		.button__gradient
+			display: block
+
+.button__gradient
 	position: absolute
+	left: 0
+	display: none
+
+//Scroll Down
+.header__scroll
+	position: relative
+	bottom: 0
+
+.scroll-down__span
 	bottom: 10px
+	position: absolute
 	left: 50%
 	width: 20px
 	height: 20px
@@ -196,5 +212,360 @@ ul, li
 	-webkit-transform: rotate(-45deg)
 	transform: rotate(-45deg)
 	box-sizing: border-box
-	
+
+/////////////////////////
+Partnered
+//////////////////////////
+
+.partnered
+	background-color: #392898
+	height: 200px
+
+.partnered__bg-right
+	margin: 80px 0 0 50px
+	max-width: 200px
+	background: linear-gradient(to right, #285fb3 0%, #392898 100%)
+
+.partnered__bg-left
+	margin-left: 50px
+	max-width: 200px
+	background: linear-gradient(to left, #285fb3 0%, #392898 100%)
+
+.partnered__heading_h2
+	font-weight: 600
+	font-size: 1.875em
+	line-height: 25px
+	margin: 0
+	padding-left: 15px
+
+.partnered__heading_h3
+	padding-left: 15px
+	line-height: 20px
+	font-size: 1.125em
+	font-weight: 400
+
+.partners
+	height: 200px
+
+.partners__link
+	display: block
+	opacity: .65
+
+.partners__item
+	padding: 0 25px
+
+//////////////////////////////
+Token Sale
+//////////////////////////////
+
+.token-sale
+	background-color: #3b1b67
+	padding: 35px 0 65px
+
+.token-sale__heading_h1
+	font-weight: 700
+	text-transform: uppercase
+	font-size: 1.875em
+	line-height: 40px
+
+.token-sale__paragraph
+	margin: 0 auto
+	font-weight: 200
+	font-size: 1em
+	line-height: 20px
+	padding: 5px 0 0
+	width: 35%
+
+.heading-underline
+	margin: 0 auto
+	width: 25%
+	height: 1px
+	background: linear-gradient(to right, #3b1b67 0%, $accent 10%, $accent 90%, #3b1b67 100%)
+
+.stats
+	width: 700px
+	height: 355px
+	background-color: #392898
+	border-radius: 175px
+	margin: 60px 0 0 75px
+
+.stats__heading_h2
+	font-size: 2.25em
+	text-transform: uppercase
+	font-weight: 600
+	width: 7%
+	margin: 0 auto
+	text-align: center
+	border-bottom: 4px #fff dashed
+	line-height: 40px
+	padding-top: 25px
+
+.stats__list-left
+	padding: 20px 0 0 25px
+	max-width: 265px
+
+.stats__item
+	max-width: 235px
+
+.stats__heading_h6
+	font-size: 1.063em
+	margin: 0
+	line-height: 26px
+
+.stats__list-bottom
+	padding: 30px 0 0 25px
+
+.stats__item-bottom
+	padding-top: 30px
+
+.stats__img
+	height: 100%
+	width: 20px
+
+.stats__paragraph
+	font-size: 1.063em
+	font-weight: 200
+	line-height: 20px
+	margin: 0
+	color: #e4e4e4
+
+.stats__paragraph-bottom
+	font-size: 0.938em
+
+.stats__line
+	width: 1px
+	height: 130px
+	background-color: #7d73b6
+	position: absolute
+	right: 20px
+	top: 20px
+
+.stats__list_mod
+	margin: 20px 0 0 -30px
+	max-width: 290px
+
+.token-sale__circle
+	height: 395px
+	width: 100%
+	max-width: 395px
+	background-color: #3b1b67
+	border-radius: 50%
+	border-radius: 50%
+	position: absolute
+	top: 39px
+	right: 85px
+
+.token-sale__contribution
+	height: 355px
+	width: 100%
+	max-width: 355px
+	background-color: #3b1b67
+	border-radius: 50%
+	position: absolute
+	top: 60px
+	right: 105px
+	box-shadow: 0 0 50px rgba(57,40,152,0.8)
+
+.token-sale__contribution
+	padding-top: 35px
+
+.contribution__list
+	padding-top: 15px
+
+.contribution__item
+	width: 190px
+	margin: -5px auto 0
+
+.contribution__heading_h4
+	font-size: 1.5em
+	font-weight: 600
+	margin: 0
+	text-align: center
+	line-height: 25px
+
+.contribution__heading_h2
+	font-size: 2.25em
+	font-weight: 600
+	margin: 0
+	line-height: 40px
+	text-align: center
+
+.contribution__paragraph
+	font-size: 1.5em
+	font-weight: 300
+	line-height: 25px
+	margin: 0
+	padding-left: 5px
+
+.contribution__img
+	max-height: 34px
+
+/////////////////////////
+Blockchain
+//////////////////////////
+
+.blockchain
+	background-color: #392898
+	padding: 10px 0 20px
+
+.blockchain__heading_h3
+	text-transform: uppercase
+	font-size: 1.875em
+	font-weight: 600
+	line-height: 35px
+	padding-top: 80px
+
+.blockchain__heading_h3-right
+	padding: 0
+
+.blockchain__paragraph
+	font-size: 1.25em
+	font-weight: 200
+	line-height: 22px
+	max-width: 370px
+
+.blockchain__btn
+	width: 180px
+	height: 45px
+	text-transform: uppercase
+	color: $text
+	background-color: transparent
+	border: 2px double $accent
+	border-radius: 5px
+	cursor: pointer
+	margin-top: 60px
+	font-weight: 600
+	font-size: 1.25em
+
+.blockchain__btn
+	&:hover, &:focus, &:active
+		box-shadow: 0 0 10px rgba(54,186,222,0.8)
+		text-shadow: 0 0 20px $accent
+
+///////////////////////////////
+Timeline
+///////////////////////////////
+
+.timeline
+  background-color: #3b1b67
+  height: 300px
+
+///////////////////////////////
+Team
+///////////////////////////////
+
+.team
+  background-color: #392898
+  padding: 15px 0 50px
+
+.team__heading_h2
+  font-weight: 700
+  text-transform: uppercase
+  margin: 0
+  line-height: 28px
+
+.team__underline
+  max-width: 120px
+
+.team__form
+  text-align: center
+  padding: 25px 0 35px
+
+.team__input
+  border: solid 2px #3b1b67 !important
+  background-color: transparent
+
+//////// Custom radio button start///////////
+.team__label
+  display: block
+  position: relative
+  padding: 0 15px 0 20px
+  font-weight: 300
+  font-size: 0.875em
+  user-select: none
+
+.team__input
+  position: absolute
+  opacity: 0
+
+.team__checkmark
+  position: absolute
+  top: 3px
+  left: 0
+  height: 16px
+  width: 16px
+  background-color: transparent
+  border: 2px solid #3b1b67
+  border-radius: 50%
+
+.team__checkmark
+  &:hover, &:active, &:focus
+      background: radial-gradient(circle, #5463b5, #8ad7ef)
+
+.team__label input:checked ~ .team__checkmark
+  background: radial-gradient(circle, #5463b5, #8ad7ef)
+
+.team__checkmark:after
+  content: ""
+  position: absolute
+  display: none
+
+.team__label input:checked ~ .team__checkmark:after
+  display: block
+//////// Custom radio button end///////////
+
+.team__item
+  background-color: #3b1b67
+  border-radius: 5px
+  max-width: 170px
+  height: 270px
+  margin-right: 20px
+
+.team__img
+  border: none
+
+.team__heading_h5
+  text-transform: uppercase
+  font-weight: 700
+  padding: 5px 0 15px 10px
+  margin: 0
+
+.team__paragraph
+  padding: 0 0 15px 10px
+  font-weight: 200
+  font-size: 0.625em
+  margin: 0
+
+.team__list-icon
+  margin-top: -10px
+  padding-left: 6px
+
+//////////////////////////////
+//Footer
+/////////////////////////////
+
+.footer
+  height: 80px
+  background-color: #3b1b67
+  position: relative
+
+.footer__svg
+  padding-top: 7px
+
+.footer__svg
+  &:hover, &:focus, &:active
+    .footer__svg-hover
+      display: block
+
+.footer__svg-hover
+  display: none
+  position: absolute
+  top: 20px
+  left: -10px
+
+.footer__heading_h6
+  font-weight: 200
+  font-size: 0.875em
+  padding-top: 25px
+
 @import "media" // Always at the end
