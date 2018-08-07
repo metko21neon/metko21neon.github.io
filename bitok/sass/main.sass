@@ -3,7 +3,11 @@
 @import "libs"
 
 ::placeholder
-	color: #666
+  color: $text
+  opacity: 1
+  font-weight: 200
+  font-size: 0.75em
+  text-transform: none
 
 ::selection
 	background-color: $accent
@@ -52,8 +56,17 @@ b, strong
 	height: 1px
 	background: linear-gradient(to right, #3b1b67 0%, $accent 10%, $accent 90%, #3b1b67 100%)
 
+.header__menu_fixed
+	position: fixed
+	width: 100%
+	z-index: 1000
+	background-color: $bg-dark
+
+.header__menu_static
+	padding-top: 73px
+
 .logo
-	margin-bottom: 5px
+  margin-bottom: -6px
 
 ul, li
 	display: block
@@ -87,15 +100,20 @@ ul, li
 		.box
 			background: linear-gradient(to right, #3b1b67 0%, $accent 50%, #3b1b67 100%)
 
+.menu__link_active
+	text-decoration: none
+	color: $text
+	text-shadow: 0 0 1em $accent
+	cursor: pointer
+	.box
+		background: linear-gradient(to right, #3b1b67 0%, $accent 50%, #3b1b67 100%)
+
 .box
 	width: 100%
 	height: 1px
 
 .icons
-	margin-top: 14px
-
-.icons__item
-	margin-right: -27px
+	margin-top: 23px
 
 .header__heading
 	font-size: 3em
@@ -141,6 +159,31 @@ ul, li
 
 .header__timer
 	height: 150px
+
+.timer__item
+	padding-top: 40px
+	position: relative
+
+.timer__item:first-child
+	padding-right: 50px
+
+.timer__clock
+	font-weight: 600
+	font-size: 4.5em
+	color: $accent
+	text-shadow: 0 0 50px $accent
+	line-height: 45px
+
+.timer__span
+	font-weight: 300
+	font-size: 1em
+	color: $text
+	display: block
+	text-transform: uppercase
+
+.timer__semicolon
+	font-size: 90px
+	line-height: 24px
 
 .header__btn
 	display: block
@@ -191,8 +234,6 @@ ul, li
 			display: block
 
 .button__gradient
-	position: absolute
-	left: 0
 	display: none
 
 //Scroll Down
@@ -207,8 +248,8 @@ ul, li
 	width: 20px
 	height: 20px
 	margin-left: -12px
-	border-left: 1px solid $accent
-	border-bottom: 1px solid $accent
+	border-left: 1px solid #fff
+	border-bottom: 1px solid #fff
 	-webkit-transform: rotate(-45deg)
 	transform: rotate(-45deg)
 	box-sizing: border-box
@@ -263,10 +304,11 @@ Token Sale
 	padding: 35px 0 65px
 
 .token-sale__heading_h1
-	font-weight: 700
-	text-transform: uppercase
-	font-size: 1.875em
-	line-height: 40px
+  font-weight: 700
+  text-transform: uppercase
+  font-size: 1.875em
+  margin: 0
+  line-height: 40px
 
 .token-sale__paragraph
 	margin: 0 auto
@@ -277,10 +319,11 @@ Token Sale
 	width: 35%
 
 .heading-underline
+	width: 100%
+	max-width: 240px
 	margin: 0 auto
-	width: 25%
 	height: 1px
-	background: linear-gradient(to right, #3b1b67 0%, $accent 10%, $accent 90%, #3b1b67 100%)
+	background: linear-gradient(to right, #3b1b67 0%, $accent 20%, $accent 80%, #3b1b67 100%)
 
 .stats
 	width: 700px
@@ -296,9 +339,13 @@ Token Sale
 	width: 7%
 	margin: 0 auto
 	text-align: center
-	border-bottom: 4px #fff dashed
 	line-height: 40px
 	padding-top: 25px
+
+.stats__heading_img
+	transform: translateX(-70%)
+	position: absolute
+	right: 50%
 
 .stats__list-left
 	padding: 20px 0 0 25px
@@ -408,15 +455,26 @@ Blockchain
 	background-color: #392898
 	padding: 10px 0 20px
 
+.blockchain__heading
+	position: relative
+	margin-top: 80px
+
 .blockchain__heading_h3
 	text-transform: uppercase
 	font-size: 1.875em
 	font-weight: 600
 	line-height: 35px
-	padding-top: 80px
 
-.blockchain__heading_h3-right
-	padding: 0
+.blockchain__img
+	padding-top: 15px
+
+.blockchain__heading_img-right
+	position: absolute
+	top: 32px
+
+.blockchain__heading_img-left
+	position: absolute
+	top: 66px
 
 .blockchain__paragraph
 	font-size: 1.25em
@@ -433,7 +491,7 @@ Blockchain
 	border: 2px double $accent
 	border-radius: 5px
 	cursor: pointer
-	margin-top: 60px
+	margin-bottom: 10px
 	font-weight: 600
 	font-size: 1.25em
 
@@ -449,6 +507,81 @@ Timeline
 .timeline
   background-color: #3b1b67
   height: 300px
+  padding: 20px 0 75px
+
+.timeline__underline
+  width: 100%
+  max-width: 250px
+
+.timeline__list
+	width: 100%
+
+.timeline__timeline:before
+	content: '\f104'
+	font-family: FontAwesome
+	position: absolute
+	font-size: 2.5em
+	line-height: 25px
+	color: $accent
+	left: 0
+	top: 43px
+
+.timeline__timeline:after
+	content: '\f105'
+	font-family: FontAwesome
+	position: absolute
+	font-size: 2.5em
+	line-height: 25px
+	color: $accent
+	right: 0
+	top: 43px
+
+.timeline__item
+  width: 100%
+  max-width: 210px
+  text-align: center
+  z-index: 2
+  padding-right: 8px
+
+.timeline__item:after
+  content: ''
+  display: block
+  margin: -138px auto 15px
+  width: 20px
+  height: 20px
+  border: 2px solid #392898
+  border-radius: 50%
+  background-color: transparent
+
+.timeline__item:before
+  content: ''
+  display: block
+  margin: 50px auto 15px
+  width: 14px
+  height: 14px
+  border-radius: 50%
+  background-color: #00dff1
+
+.timeline__list:after
+  content: ''
+  position: absolute
+  width: 90%
+  max-width: 840px
+  height: 5px
+  background: linear-gradient(to right, #3b1b67 0%, #392898 10%, #392898 90%, #3b1b67 100%)
+  top: 54px
+
+.timeline__heading_h5
+  font-size: 1.125em
+  font-weight: 400
+  margin: 0
+  line-height: 20px
+  padding-bottom:  10px
+
+.timeline__paragraph
+  font-weight: 200
+  font-size: 0.875em
+  line-height: 20px
 
 ///////////////////////////////
 Team
@@ -465,7 +598,8 @@ Team
   line-height: 28px
 
 .team__underline
-  max-width: 120px
+	max-width: 120px
+	background: linear-gradient(to right, $bg-light 0%, $accent 20%, $accent 80%, $bg-light 100%)
 
 .team__form
   text-align: center
@@ -541,12 +675,38 @@ Team
   padding-left: 6px
 
 //////////////////////////////
+//Customer
+/////////////////////////////
+
+.customer
+  height: 150px
+  background-color: $bg-dark
+  padding: 15px 0 35px
+
+.customer__underline
+
+.customer__form
+  padding-top: 20px
+
+.customer__input
+  width: 100%
+  max-width: 380px
+  margin: 0
+  padding: 0 15px
+  color: $text
+  text-transform: capitalize
+
+.customer__btn
+  margin: 0
+  padding: 0
+
+//////////////////////////////
 //Footer
 /////////////////////////////
 
 .footer
   height: 80px
-  background-color: #3b1b67
+  background-color: $bg-light
   position: relative
 
 .footer__svg
@@ -566,6 +726,52 @@ Team
 .footer__heading_h6
   font-weight: 200
   font-size: 0.875em
-  padding-top: 25px
+  padding-top: 33px
+
+.footer__link
+  color: $text
+  text-align: center
+
+.footer__link
+  &:hover, &:focus, &:active
+    text-decoration: none
+    color: $text
+
+.footer__paragraph
+  font-size: 0.875em
+  font-weight: 200
+  text-decoration: underline
+  margin: 30px 0 0
+
+/////Button to top start/////
+.top
+	position: fixed
+	bottom: -130px
+	right: 20px
+	width: 40px
+	height: 40px
+	line-height: 40px
+	background-color: #ffffff
+	color: #fff
+	border-radius: 50%
+	cursor: pointer
+	text-align: center
+	z-index: 5
+	//+mt(.5s)
+
+.top__fa
+	top: -2px
+	font-size: 14px
+	color: #000
+	position: relative
+	display: inline-block
+
+.top
+	&:hover, &:focus, &:active
+		background-color: $darken
+
+.top__active
+	bottom: 20px
+/////Button to top end/////
 
 @import "media" // Always at the end

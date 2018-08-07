@@ -1,31 +1,94 @@
 @import "vars"
 
+@include media-breakpoint-only(xs)
 
-/*==========  Desktop First  ==========*/
+  //Timeline//
+  .timeline
+    padding: 10px 0 0
 
-// ≥1200px
-+media-breakpoint-down(lg)
+@include media-breakpoint-down(sm)
 
-// ≥992px
-+media-breakpoint-down(md)
+  //Header//
+  .icons
+    margin-top: 8px
 
-// ≥768px
-+media-breakpoint-down(sm)
+  .heading
+    margin-top: 30px
+    width: 100%
+    max-width: 410px
 
-// ≥576px
-+media-breakpoint-down(xs)
+  .header__heading_bg-right
+    width: 100%
+    max-width: 385px
 
+  .button
+    margin: 0 0 20px
 
-/*==========  Mobile First  ==========*/
+  .header__scroll
+    height: 12px
 
-// ≤576px
-+media-breakpoint-up(sm)
+  //Partnered//
+  .partnered__bg-right
+    margin-left: 0
 
-// ≤768px
-+media-breakpoint-up(md)
+  .partnered__bg-left
+    margin-left: 0
 
-// ≤992px
-+media-breakpoint-up(lg)
+  .partners__item
+    padding: 0 10px
 
-// ≤1200px
-+media-breakpoint-up(xl)
+  //Token sale//
+  .token-sale
+    padding-top: 10px
+    height: 500px
+
+  .token-sale__paragraph
+    margin: 0 auto
+    width: 80%
+
+  .token-sale__contribution
+    top: 20px
+    left: 50%
+    transform: translateX(-50%)
+
+    //Blockchain//
+  .blockchain__heading
+    margin-top: 50px
+
+  .blockchain__paragraph
+    margin: 0 0 50px 45px
+
+  .blockchain__btn
+    margin: 0 auto 50px
+    display: block
+
+  //Timeline//
+  .timeline
+    height: 280px
+
+@include media-breakpoint-only(sm)
+  //Team//
+  .team__item
+    margin: 0 20px
+
+@include media-breakpoint-only(md)
+  //Header//
+  .menu__item
+    margin: 0 18px
+
+  .icons__item
+    margin-right: -4px
+
+  //Partnered//
+  .partnered__bg-right
+    margin-left: 0
+
+  .partnered__bg-left
+    margin-left: 0
+
+  //Team//
+  .team__item
+    margin-right: 10px
+    max-width: 165px
+    height: 260px
+
