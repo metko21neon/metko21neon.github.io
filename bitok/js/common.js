@@ -1,13 +1,48 @@
 $(function() {
 
+    //Mixitup
+    var mixer = mixitup('.team__list');
+
+    //Timeline
+    $('.timeline').timeline({
+        mode: 'horizontal',
+        forceVerticalMode: 600,
+        visibleItems: 3
+    });
+
+    //PageScrollToId
+    $("a[rel='m_PageScroll2id']").mPageScroll2id({
+        offset: 72
+    });
+
+    /*//Flip-clock
+    var clock = new FlipClock($('.header__timer'), {
+        clockFace: "DailyCounter",
+        autoStart: true,
+        countdown: true
+    });
+    clock.setTime(50000);
+    clock.setCountdown(true);
+    clock.start();*/
+
     //Owl-carousel
     var owl = $('.owl-carousel');
     owl.owlCarousel({
-        items:5,
         loop:true,
         autoplay:true,
         autoplayTimeout:3000,
-        autoplayHoverPause:true
+        autoplayHoverPause:true,
+        responsive:{
+            0:{
+                items:2
+            },
+            991:{
+                items:3
+            },
+            1199:{
+                items:5
+            }
+        }
     });
     $('.play').on('click',function(){
         owl.trigger('play.owl.autoplay',[1000])
