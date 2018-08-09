@@ -14,11 +14,11 @@ $(function() {
     var mixer = mixitup('.team__list');
 
     //Timeline
-    $('.timeline').timeline({
+    /*$('.timeline').timeline({
         mode: 'horizontal',
         forceVerticalMode: 600,
         visibleItems: 3
-    });
+    });*/
 
     //PageScrollToId
     $("a[rel='m_PageScroll2id']").mPageScroll2id({
@@ -44,6 +44,9 @@ $(function() {
         autoplayHoverPause:true,
         responsive:{
             0:{
+                items:1
+            },
+            480:{
                 items:2
             },
             991:{
