@@ -1,5 +1,15 @@
 $(function() {
 
+    //toggle_menu
+    $(".toggle-menu__button").click(function() {
+        $(".toggle-menu").toggleClass("toggle-menu_active");
+    });
+
+    $(".mobile-menu__link").click(function() {
+        $(".collapse").removeClass("show");
+        $(".toggle-menu").toggleClass("toggle-menu_active");
+    });
+
     //Mixitup
     var mixer = mixitup('.team__list');
 
@@ -12,7 +22,7 @@ $(function() {
 
     //PageScrollToId
     $("a[rel='m_PageScroll2id']").mPageScroll2id({
-        offset: 72
+        offset: 66
     });
 
     /*//Flip-clock

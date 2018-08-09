@@ -105,27 +105,45 @@
 						</li>
 					</ul>
 				</div>
-				<div class="d-md-none">
-					<div class="pos-f-t">
-						<div class="collapse" id="navbarToggleExternalContent">
-							<div class="bg-dark p-4">
-								<h4 class="text-white">Collapsed content</h4>
-								<span class="text-muted">Toggleable via the navbar brand.</span>
-							</div>
-						</div>
-						<nav class="navbar navbar-dark bg-dark">
-							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-								<span class="navbar-toggler-icon"></span>
-							</button>
-						</nav>
-					</div>
-					<div id="demo" class="collapse">
-						<ul>
-							<li>
-								<a href="#">
-									<i class="fa fa-angle-right" aria-hidden="true"></i>
-									Home
-									<span class="sr-only">(current)</span>
+				<div class="col-2 offset-2 d-md-none">
+					<button class="toggle-menu__button" type="button" data-toggle="collapse" data-target="#mobile__menu">
+						<span class="toggle-menu">
+							<span class="toggle-menu__topper"></span>
+							<span class="toggle-menu__bottom"></span>
+							<span class="toggle-menu__footer"></span>
+						</span>
+					</button>
+				</div>
+				<div class="col-12">
+					<div id="mobile__menu" class="collapse">
+						<ul class="mobile-menu">
+							<li class="menu__item mobile-menu__item">
+								<a href="#header" rel="m_PageScroll2id" class="menu__link mobile-menu__link">
+									Initial Coin Offering
+								</a>
+								<div class="mobile-menu__underline"></div>
+							</li>
+							<li class="menu__item mobile-menu__item">
+								<a href="#token-sale" rel="m_PageScroll2id" class="menu__link mobile-menu__link">
+									Token Sale
+								</a>
+								<div class="mobile-menu__underline"></div>
+							</li>
+							<li class="menu__item mobile-menu__item">
+								<a href="#blockchain" rel="m_PageScroll2id" class="menu__link mobile-menu__link">
+									Blockchain
+								</a>
+								<div class="mobile-menu__underline"></div>
+							</li>
+							<li class="menu__item mobile-menu__item">
+								<a href="#timeline" rel="m_PageScroll2id" class="menu__link mobile-menu__link">
+									Timeline
+								</a>
+								<div class="mobile-menu__underline"></div>
+							</li>
+							<li class="menu__item mobile-menu__item">
+								<a href="#team" rel="m_PageScroll2id" class="menu__link mobile-menu__link">
+									Team
 								</a>
 							</li>
 						</ul>
