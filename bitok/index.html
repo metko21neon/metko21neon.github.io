@@ -14,8 +14,7 @@
 	
 	<!-- Template Basic Images Start -->
 	<meta property="og:image" content="path/to/image.jpg">
-	<link rel="icon" href="img/favicon/bitok.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<link rel="icon" href="img/favicon.ico">
 	<!-- Template Basic Images End -->
 	
 	<!-- Custom Browsers Color Start -->
@@ -80,33 +79,33 @@
 					<ul class="icons d-flex justify-content-center">
 						<li class="icons__item">
 							<a href="https://www.facebook.com/">
-								<img src="img/facebook.png" alt="Facebook">
+								<img src="img/header/icons/facebook.png" alt="Facebook">
 							</a>
 						</li>
 						<li class="icons__item">
 							<a href="https://plus.google.com/">
-								<img src="img/google-plus.png" alt="Google plus">
+								<img src="img/header/icons/google-plus.png" alt="Google plus">
 							</a>
 						</li>
 						<li class="icons__item">
 							<a href="https://www.instagram.com/">
-								<img src="img/instagram.png" alt="Instagram">
+								<img src="img/header/icons/instagram.png" alt="Instagram">
 							</a>
 						</li>
 						<li class="icons__item">
 							<a href="https://twitter.com">
-								<img src="img/twitter.png" alt="Twitter">
+								<img src="img/header/icons/twitter.png" alt="Twitter">
 							</a>
 						</li>
 						<li class="icons__item">
 							<a href="https://www.pinterest.com/">
-								<img src="img/pinterest.png" alt="Pinterest">
+								<img src="img/header/icons/pinterest.png" alt="Pinterest">
 							</a>
 						</li>
 					</ul>
 				</div>
 				<div class="col-2 offset-2 d-md-none">
-					<button class="toggle-menu__button" type="button" data-toggle="collapse" data-target="#mobile__menu">
+					<button class="toggle-menu__button" type="button" data-toggle="collapse" data-target="#mobile__menu" aria-expanded="false" aria-controls="mobile__menu">
 						<span class="toggle-menu">
 							<span class="toggle-menu__topper"></span>
 							<span class="toggle-menu__bottom"></span>
@@ -115,8 +114,8 @@
 					</button>
 				</div>
 				<div class="col-12">
-					<div id="mobile__menu" class="collapse">
-						<ul class="mobile-menu">
+					<div id="mobile__menu" class="collapse mobile-menu">
+						<ul>
 							<li class="menu__item mobile-menu__item">
 								<a href="#header" rel="m_PageScroll2id" class="menu__link mobile-menu__link">
 									Initial Coin Offering
@@ -159,11 +158,11 @@
 						<h1 class="header__heading text-scale">Landing Page for</h1>
 					</div>
 					<div class="header__heading_bg-left">
-						<h1 class="header__heading">Initial Coin Offering</h1>
-						<p class="header__paragraph">Minimum purchase is 50 Coins tokens. Get a bonus from 5% to 25% on every token purchase</p>
+						<h1 class="header__heading text-scale">Initial Coin Offering</h1>
+						<p class="header__paragraph text-scale">Minimum purchase is 50 Coins tokens. Get a bonus from 5% to 25% on every token purchase</p>
 					</div>
 					<div class="heading header__heading_bg-right">
-						<h2 class="header__heading_h2">Second step closing in</h2>
+						<h2 class="header__heading_h2 text-scale">Second step closing in</h2>
 					</div>
 					<ul class="header__timer d-flex">
 						<li class="timer__item">
@@ -205,18 +204,14 @@
 					</a>
 				</div>
 				<div class="col-lg-6 col-md-6 d-none d-md-block">
-					<img src="img/image.png" alt="Main image" class="header__img wow fadeIn" data-wow-duration="3s">
+					<img src="img/header/image.png" alt="Main image" class="header__img wow fadeIn" data-wow-duration="3s">
 				</div>
 			</div>
 		</div>
-		<div class="container-fluid">
-			<div class="row">
-				<div class="header__scroll">
-					<a href="#partnered" rel="m_PageScroll2id" class="d-none d-md-block">
-						<span class="scroll-down__span"></span>
-					</a>
-				</div>
-			</div>
+		<div class="header__scroll">
+			<a href="#partnered" rel="m_PageScroll2id" class="d-none d-md-block">
+				<span class="scroll-down__span"></span>
+			</a>
 		</div>
 	</header>
 	<section id="partnered" class="partnered">
@@ -234,27 +229,27 @@
 					<ul class="owl-carousel partners d-flex justify-content-center align-items-center">
 						<li class="partners__item">
 							<a href="#" class="partners__link">
-								<img src="img/partner-logo.png" alt="Partner logo">
+								<img src="img/partners/logo.png" alt="Partner logo">
 							</a>
 						</li>
 						<li class="partners__item">
 							<a href="#" class="partners__link">
-								<img src="img/partner-logo.png" alt="Partner logo">
+								<img src="img/partners/logo.png" alt="Partner logo">
 							</a>
 						</li>
 						<li class="partners__item">
 							<a href="#" class="partners__link">
-								<img src="img/partner-logo.png" alt="Partner logo">
+								<img src="img/partners/logo.png" alt="Partner logo">
 							</a>
 						</li>
 						<li class="partners__item">
 							<a href="#" class="partners__link">
-								<img src="img/partner-logo.png" alt="Partner logo">
+								<img src="img/partners/logo.png" alt="Partner logo">
 							</a>
 						</li>
 						<li class="partners__item">
 							<a href="#" class="partners__link">
-								<img src="img/partner-logo.png" alt="Partner logo">
+								<img src="img/partners/logo.png" alt="Partner logo">
 							</a>
 						</li>
 					</ul>
@@ -268,7 +263,7 @@
 				<div class="col-lg-12">
 					<h1 class="token-sale__heading_h1 text-center text-scale">Token sale stats</h1>
 					<div class="heading-underline"></div>
-					<p class="token-sale__paragraph text-center">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+					<p class="token-sale__paragraph text-center text-scale">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
 				</div>
 			</div>
 			<div class="row">
@@ -281,42 +276,42 @@
 								<ul class="stats__list-left">
 									<li class="stats__item d-flex justify-content-between">
 										<h6 class="stats__heading_h6 text-scale">
-											<img src="img/arrow.png" alt="Arrow" class="stats__img">
+											<img src="img/token-sale/arrow-right.png" alt="Arrow" class="stats__img">
 											Total Contributors
 										</h6>
 										<p class="stats__paragraph text-scale">7,591</p>
 									</li>
 									<li class="stats__item d-flex justify-content-between">
 										<h6 class="stats__heading_h6 text-scale">
-											<img src="img/arrow.png" alt="Arrow" class="stats__img">
+											<img src="img/token-sale/arrow-right.png" alt="Arrow" class="stats__img">
 											Token Uses
 										</h6>
 										<p class="stats__paragraph text-scale">Ethereum</p>
 									</li>
 									<li class="stats__item d-flex justify-content-between">
 										<h6 class="stats__heading_h6 text-scale">
-											<img src="img/arrow.png" alt="Arrow" class="stats__img">
+											<img src="img/token-sale/arrow-right.png" alt="Arrow" class="stats__img">
 											Token Standart
 										</h6>
 										<p class="stats__paragraph text-scale">ERC20</p>
 									</li>
 									<li class="stats__item d-flex justify-content-between">
 										<h6 class="stats__heading_h6 text-scale">
-											<img src="img/arrow.png" alt="Arrow" class="stats__img">
+											<img src="img/token-sale/arrow-right.png" alt="Arrow" class="stats__img">
 											Token Name
 										</h6>
 										<p class="stats__paragraph text-scale">BITWALLET</p>
 									</li>
 									<li class="stats__item d-flex justify-content-between">
 										<h6 class="stats__heading_h6 text-scale">
-											<img src="img/arrow.png" alt="Arrow" class="stats__img">
+											<img src="img/token-sale/arrow-right.png" alt="Arrow" class="stats__img">
 											Token Symbol
 										</h6>
 										<p class="stats__paragraph text-scale">CRP</p>
 									</li>
 									<li class="stats__item stats__item-bottom d-flex justify-content-between">
 										<h6 class="stats__heading_h6 text-scale">
-											<img src="img/arrow.png" alt="Arrow" class="stats__img">
+											<img src="img/token-sale/arrow-right.png" alt="Arrow" class="stats__img">
 											Countries Excluded
 										</h6>
 									</li>
@@ -327,35 +322,35 @@
 								<ul class="stats__list_mod">
 									<li class="stats__item_mod d-flex justify-content-between">
 										<h6 class="stats__heading_h6 text-scale">
-											<img src="img/arrow.png" alt="Arrow" class="stats__img">
+											<img src="img/token-sale/arrow-right.png" alt="Arrow" class="stats__img">
 											Average Contribution
 										</h6>
 										<p class="stats__paragraph text-scale">$1,128 / Cont.</p>
 									</li>
 									<li class="stats__item_mod d-flex justify-content-between">
 										<h6 class="stats__heading_h6 text-scale">
-											<img src="img/arrow.png" alt="Arrow" class="stats__img">
+											<img src="img/token-sale/arrow-right.png" alt="Arrow" class="stats__img">
 											Number of Transactions
 										</h6>
 										<p class="stats__paragraph text-scale">8,432</p>
 									</li>
 									<li class="stats__item_mod d-flex justify-content-between">
 										<h6 class="stats__heading_h6 text-scale">
-											<img src="img/arrow.png" alt="Arrow" class="stats__img">
+											<img src="img/token-sale/arrow-right.png" alt="Arrow" class="stats__img">
 											Countries Participated
 										</h6>
 										<p class="stats__paragraph text-scale">84</p>
 									</li>
 									<li class="stats__item_mod d-flex justify-content-between">
 										<h6 class="stats__heading_h6 text-scale">
-											<img src="img/arrow.png" alt="Arrow" class="stats__img">
+											<img src="img/token-sale/arrow-right.png" alt="Arrow" class="stats__img">
 											Total Tokens Issued
 										</h6>
 										<p class="stats__paragraph text-scale">105,422,433</p>
 									</li>
 									<li class="stats__item_mod d-flex justify-content-between">
 										<h6 class="stats__heading_h6 text-scale">
-											<img src="img/arrow.png" alt="Arrow" class="stats__img">
+											<img src="img/token-sale/arrow-right.png" alt="Arrow" class="stats__img">
 											Token Sale Jurisdiction
 										</h6>
 										<p class="stats__paragraph text-scale">Gibraltar</p>
@@ -382,39 +377,34 @@
 						<h2 class="contribution__heading_h2 text-scale">2,568,698 USD</h2>
 						<ul class="contribution__list">
 							<li class="contribution__item d-flex">
-								<img src="img/bitcoin.png" alt="Bitcoin" class="contribution__img">
-								<h4 class="contribution__heading_h4">BTC:</h4>
+								<img src="img/token-sale/icons/btc.png" alt="Bitcoin" class="contribution__img">
+								<h4 class="contribution__heading_h4 text-scale">BTC:</h4>
 								<p class="contribution__paragraph text-scale">$8,533</p>
 							</li>
 							<li class="contribution__item d-flex">
-								<img src="img/eth.png" alt="Bitcoin" class="contribution__img">
-								<h4 class="contribution__heading_h4">ETH:</h4>
+								<img src="img/token-sale/icons/eth.png" alt="Bitcoin" class="contribution__img">
+								<h4 class="contribution__heading_h4 text-scale">ETH:</h4>
 								<p class="contribution__paragraph text-scale">$487.65</p>
 							</li>
 							<li class="contribution__item d-flex">
-								<img src="img/dash.png" alt="DASH" class="contribution__img">
-								<h4 class="contribution__heading_h4">DASH:</h4>
+								<img src="img/token-sale/icons/dash.png" alt="DASH" class="contribution__img">
+								<h4 class="contribution__heading_h4 text-scale">DASH:</h4>
 								<p class="contribution__paragraph text-scale">$423.45 </p>
 							</li>
 							<li class="contribution__item d-flex">
-								<img src="img/ltc.png" alt="LTC" class="contribution__img">
-								<h4 class="contribution__heading_h4">LTC:</h4>
+								<img src="img/token-sale/icons/ltc.png" alt="LTC" class="contribution__img">
+								<h4 class="contribution__heading_h4 text-scale">LTC:</h4>
 								<p class="contribution__paragraph text-scale">$166.19</p>
 							</li>
 							<li class="contribution__item d-flex">
-								<img src="img/dbg.png" alt="GBG" class="contribution__img">
-								<h4 class="contribution__heading_h4">GBG:</h4>
+								<img src="img/token-sale/icons/dbg.png" alt="GBG" class="contribution__img">
+								<h4 class="contribution__heading_h4 text-scale">GBG:</h4>
 								<p class="contribution__paragraph text-scale">$17.98</p>
 							</li>
 							<li class="contribution__item d-flex">
-								<img src="img/xlm.png" alt="XLM" class="contribution__img">
-								<h4 class="contribution__heading_h4">XLM:</h4>
+								<img src="img/token-sale/icons/xlm.png" alt="XLM" class="contribution__img">
+								<h4 class="contribution__heading_h4 text-scale">XLM:</h4>
 								<p class="contribution__paragraph text-scale">$0.70</p>
-							</li>
-							<li class="contribution__item d-flex">
-								<img src="img/bitcoin.png" alt="XRP" class="contribution__img">
-								<h4 class="contribution__heading_h4">XRP:</h4>
-								<p class="contribution__paragraph text-scale">$219.34</p>
 							</li>
 						</ul>
 					</div>
@@ -439,12 +429,12 @@
 						pre-specified conditions.</p>
 				</div>
 				<div class="col-lg-6 col-md-6 d-none d-md-block">
-					<img src="img/blockchain-right.png" alt="Blockchain" class="blockchain__img">
+					<img src="img/blockchain/blockchain.png" alt="Blockchain" class="blockchain__img">
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-lg-6 col-md-6 d-none d-md-block">
-					<img src="img/blockchain-left.png" alt="Blockchain" class="blockchain__img">
+					<img src="img/blockchain/blockchain.png" alt="Blockchain" class="blockchain__img_reverse ">
 				</div>
 				<div class="col-lg-5 col-md-5 offset-md-1 offset-1 wow slideInRight">
 					<div class="blockchain__heading">
@@ -512,104 +502,104 @@
 					<form class="team__form d-flex justify-content-center">
 						<label class="team__label">
 							Leadership Team
-							<input type="radio" name="radio" checked="checked" class="team__input" data-filter=".leadership">
+							<input type="radio" name="radio" checked="checked" class="team__input" data-filter="all" data-mixitup-control>
 							<span class="team__checkmark"></span>
 						</label>
 						<label class="team__label">
 							Advisory Board
-							<input type="radio" name="radio" class="team__input" data-filter=".board">
+							<input type="radio" name="radio" class="team__input" data-filter=".board" data-mixitup-control>
 							<span class="team__checkmark"></span>
 						</label>
 					</form>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-lg-9 offset-lg-2 col-md-12 offset-md-0 col-sm-10 offset-sm-1 col-12">
-					<ul class="team__list d-flex justify-content-center">
-						<li class="team__item mix leadership" data-order="1">
-							<img src="img/person-one.png" alt="Person" class="team__img img-responsive">
-							<h5 class="team__heading_h5">Waylon Dayton</h5>
-							<p class="team__paragraph">CEO&Lead Blockchain</p>
+				<div class="col-12">
+					<ul class="team__list">
+						<li class="team__item mix" data-order="1">
+							<img src="img/team/person-one.png" alt="Person" class="team__img img-responsive">
+							<h5 class="team__heading_h5 text-scale">Waylon Dayton</h5>
+							<p class="team__paragraph text-scale">CEO&Lead Blockchain</p>
 							<ul class="team__list-icon d-flex">
 								<li class="">
 									<a href="https://www.facebook.com/">
-										<img src="img/team-facebook.png" alt="Facebook">
+										<img src="img/team/icons/facebook.png" alt="Facebook">
 									</a>
 								</li>
 								<li class="">
 									<a href="https://twitter.com">
-										<img src="img/team-twitter.png" alt="Twitter">
+										<img src="img/team/icons/twitter.png" alt="Twitter">
 									</a>
 								</li>
 								<li class="">
 									<a href="https://www.linkedin.com/">
-										<img src="img/team-linked.png" alt="Linked">
+										<img src="img/team/icons/linked.png" alt="Linked">
 									</a>
 								</li>
 							</ul>
-						</li>
-						<li class="team__item mix leadership board" data-order="2">
-							<img src="img/person-two.png" alt="Person" class="team__img img-responsive">
-							<h5 class="team__heading_h5">Waylon Dayton</h5>
-							<p class="team__paragraph">CEO&Lead Blockchain</p>
+						</li><!--
+						--><li class="team__item mix board" data-order="2">
+							<img src="img/team/person-two.png" alt="Person" class="team__img img-responsive">
+							<h5 class="team__heading_h5 text-scale">Waylon Dayton</h5>
+							<p class="team__paragraph text-scale">CEO&Lead Blockchain</p>
 							<ul class="team__list-icon d-flex">
 								<li class="">
 									<a href="https://www.facebook.com/">
-										<img src="img/team-facebook.png" alt="Facebook">
+										<img src="img/team/icons/facebook.png" alt="Facebook">
 									</a>
 								</li>
 								<li class="">
 									<a href="https://twitter.com">
-										<img src="img/team-twitter.png" alt="Twitter">
+										<img src="img/team/icons/twitter.png" alt="Twitter">
 									</a>
 								</li>
 								<li class="">
 									<a href="https://www.linkedin.com/">
-										<img src="img/team-linked.png" alt="Linked">
+										<img src="img/team/icons/linked.png" alt="Linked">
 									</a>
 								</li>
 							</ul>
-						</li>
-						<li class="team__item team__item_small mix leadership" data-order="3">
-							<img src="img/person-three.png" alt="Person" class="team__img img-responsive">
-							<h5 class="team__heading_h5">Waylon Dayton</h5>
-							<p class="team__paragraph">CEO&Lead Blockchain</p>
+						</li><!--
+						--><li class="team__item mix board" data-order="3">
+							<img src="img/team/person-three.png" alt="Person" class="team__img img-responsive">
+							<h5 class="team__heading_h5 text-scale">Waylon Dayton</h5>
+							<p class="team__paragraph text-scale">CEO&Lead Blockchain</p>
 							<ul class="team__list-icon d-flex">
 								<li class="">
 									<a href="https://www.facebook.com/">
-										<img src="img/team-facebook.png" alt="Facebook">
+										<img src="img/team/icons/facebook.png" alt="Facebook">
 									</a>
 								</li>
 								<li class="">
 									<a href="https://twitter.com">
-										<img src="img/team-twitter.png" alt="Twitter">
+										<img src="img/team/icons/twitter.png" alt="Twitter">
 									</a>
 								</li>
 								<li class="">
 									<a href="https://www.linkedin.com/">
-										<img src="img/team-linked.png" alt="Linked">
+										<img src="img/team/icons/linked.png" alt="Linked">
 									</a>
 								</li>
 							</ul>
-						</li>
-						<li class="team__item team__item_small mix leadership board" data-order="4">
-							<img src="img/person-four.png" alt="Person" class="team__img img-responsive">
-							<h5 class="team__heading_h5">Waylon Dayton</h5>
-							<p class="team__paragraph">CEO&Lead Blockchain</p>
+						</li><!--
+						--><li class="team__item mix" data-order="4">
+							<img src="img/team/person-four.png" alt="Person" class="team__img img-responsive">
+							<h5 class="team__heading_h5 text-scale">Waylon Dayton</h5>
+							<p class="team__paragraph text-scale">CEO&Lead Blockchain</p>
 							<ul class="team__list-icon d-flex">
 								<li class="">
 									<a href="https://www.facebook.com/">
-										<img src="img/team-facebook.png" alt="Facebook">
+										<img src="img/team/icons/facebook.png" alt="Facebook">
 									</a>
 								</li>
 								<li class="">
 									<a href="https://twitter.com">
-										<img src="img/team-twitter.png" alt="Twitter">
+										<img src="img/team/icons/twitter.png" alt="Twitter">
 									</a>
 								</li>
 								<li class="">
 									<a href="https://www.linkedin.com/">
-										<img src="img/team-linked.png" alt="Linked">
+										<img src="img/team/icons/linked.png" alt="Linked">
 									</a>
 								</li>
 							</ul>
@@ -629,14 +619,14 @@
 			</div>
 			<div class="row">
 				<div class="col-lg-12">
-					<form class="customer__form d-flex">
+					<form class="customer__form d-flex" method="post">
 						<div class="col-lg-4 offset-lg-3 offset-md-1 col-7 wow fadeInLeft">
 							<div class="form-group">
-								<input type="email" class="form-control blockchain__btn customer__input" id="email" placeholder="Insert your email">
+								<input type="email" class="form-control blockchain__btn customer__input" id="email" name="email" placeholder="Insert your email" required>
 							</div>
 						</div>
 						<div class="col-lg-3 wow fadeInRight">
-							<button type="submit" class="btn blockchain__btn customer__btn">Submit</button>
+							<button type="submit" class="btn blockchain__btn customer__btn text-scale">Submit</button>
 						</div>
 					</form>
 				</div>
@@ -671,6 +661,11 @@
 			</div>
 		</div>
 	</footer>
+	<a href="#header" rel="m_PageScroll2id">
+		<div class="top infinite d-none d-md-block" data-wow-duration="2.5s">
+			<i class="fa top__fa fa-angle-up"></i>
+		</div>
+	</a>
 
 	<script src="js/scripts.min.js"></script>
 
