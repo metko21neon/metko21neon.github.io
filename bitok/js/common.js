@@ -26,7 +26,28 @@ $(function() {
     });
 
     //Owl-carousel
-    var owl = $('.owl-carousel');
+    var owl = $('.partners__list');
+    var timeline = $('.timeline__list');
+    timeline.owlCarousel({
+        nav: true,
+        navText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
+        margin: 10,
+        responsiveClass: true,
+        responsive:{
+            0:{
+                items:1
+            },
+            480:{
+                items:2
+            },
+            991:{
+                items:3
+            },
+            1199:{
+                items:4
+            }
+        }
+    });
     owl.owlCarousel({
         loop:true,
         autoplay:true,
