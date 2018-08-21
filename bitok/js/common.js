@@ -1,5 +1,11 @@
 $(function() {
 
+    //flip-clock
+    $('.header__timer').FlipClock(5000000, {
+        clockFace: 'DailyCounter',
+        countdown: true
+    }).stop();
+
     //toggle_menu
     $(".toggle-menu__button").click(function() {
         $(".toggle-menu").toggleClass("toggle-menu_active");
