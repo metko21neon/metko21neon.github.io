@@ -4,7 +4,7 @@ $(function() {
     $('.header__timer').FlipClock(5000000, {
         clockFace: 'DailyCounter',
         countdown: true
-    }).stop();
+    });
 
     //toggle_menu
     $(".toggle-menu__button").click(function() {
